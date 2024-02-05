@@ -1,0 +1,14 @@
+from selenium import webdriver
+
+driver_path = "путь_к_вашему_драйверу/chromedriver"
+driver = webdriver.Chrome(executable_path=driver_path)
+
+driver.get("https://www.example.com")
+
+example_button = driver.find_element_by_id('example_button')
+example_button.click()
+
+example_input = driver.find_element_by_name('username')
+example_input.send_keys('ваше_имя')
+
+driver.quit()
